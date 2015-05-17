@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LED SWITCH</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+
+            var socket = io.connect(location.host);
+            function ON(){
+                socket.emit('message', '1');
+            }
+            function OFF(){
+                socket.emit('message', '0');
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div class="jumbotron">
+        <div class="container">
+            <h1>LED SWITCH</h1>      
+            <p>Make It with Edison!</p>  
+            <p></p>  
+            <input type="button" class="btn btn-info btn-lg" value="ON" onClick="ON(1)">
+            <input type="button" class="btn btn-info btn-lg" value="OFF" onClick="OFF(2)">
+        </div>
+        </div>
+    </body>
+</html>
