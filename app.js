@@ -22,7 +22,7 @@ var TCP_PORT = 3000;
 var TCP_client = new net.Socket();
 
 TCP_client.connect(TCP_PORT, TCP_HOST, function() {
-	console.log('SOCKET CONNECTED TO: ' + TCP_HOST + ':' + TCP_PORT);
+	console.log('Arduino sketch connected to...: ' + TCP_HOST + ':' + TCP_PORT);
 });
 
 io.on('connection', function(client){
